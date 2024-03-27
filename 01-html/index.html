@@ -1,0 +1,42 @@
+<!DOCTYPE html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="signup">Sign Up</h1>
+    </header>
+    <main class="main">
+        <div class="container">
+            <form action="/submit" method="POST">
+                <div class="form-group">
+                    <input id="firstname" type="text" pattern="[A-Za-z\s]{1,32}" required title="Letter Only Please" placeholder="First Name" autofocus>
+                    <input id="lastname" type="text" pattern="[A-Za-z\s]{1,32}" required title="Letter Only Please" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                    <input id="mobileNo" type="text" pattern="[789][0-9]{9}" required placeholder="Mobile No.">
+                </div>
+                <div class="form-group">
+                    <input id="email" type="email" required placeholder="Email Address">
+                </div>
+                <div class="form-group">
+                    <input id="password" type="password" required placeholder="Password">
+                    <input id="confirm-password" type="password" required placeholder="Confirm Password">
+                </div>
+                <div class="agreement">
+                    <input id="agreement" type="checkbox">
+                    <label for="agreement" class="checkbox-label">I Agree</label>
+                    <p class="explanation">By clicking <img src="button.png" width="80" alt="register button">, you agree to the <a href="#">Terms and Contiditions</a> set out by this site, including our Cookie Use.</p>
+                </div>
+                <div class="form-group">
+                    <button class="register" type="submit">Register</button>
+                    <button class="sign-in">Sign In</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
