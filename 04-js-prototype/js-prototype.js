@@ -20,7 +20,7 @@ console.log(result1, result2);
 // 2. implement my own prototype reduce method
 
 Array.prototype.myReduce = function(callback) {
-    let result = 0;
+    let result = initialValue ? initialValue : 0;
     for (const element of this) {
         result = callback(element, result);
     }
@@ -30,7 +30,7 @@ Array.prototype.myReduce = function(callback) {
 const array1 = [5, 1, 2, 3, 4, 10];
 
 // 0 + 1 + 2 + 3 + 4
-const initialValue = 0;
+const initialValue = 100;
 const sumWithInitial = array1.reduce(
   (accumulator, currentValue) => accumulator + currentValue,
   initialValue,
