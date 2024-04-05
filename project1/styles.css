@@ -1,0 +1,55 @@
+html body {
+    font-family: sans-serif;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.courses {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.coursecontainer {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 60vh;
+    overflow-y: auto;
+    width: 30vw;
+}
+
+.course:nth-child(odd) {
+    background-color: lightgreen;
+}
+
+.course {
+    border: 1px solid black;
+    padding-right: 2rem;
+}
+
+.selected {
+    background-color: lightblue !important;
+}
+
+.confirm {
+    /* display: inline-block; */
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.totalcredits {
+    padding-right: 2rem;
+    display: inline-block;
+}
+
+
+
+/* .selectbtn {
+    font-size: small;
+} */
