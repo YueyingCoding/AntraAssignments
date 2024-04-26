@@ -1,0 +1,5 @@
+<h3>Parent Component {{ num }} {{ nums }}</h3>
+<input type="text" (keyup)="onKeyup(inputField1)" #inputField1>
+<input type="text" (keyup)="newMessage(inputField2)" #inputField2>
+<p>Message from Child: {{ fromChild }}</p>
+<!-- <app-child [fromParent]="toChild" (customEvent)="onCustomEvent($event)" [message2]="message2"></app-child> -->
