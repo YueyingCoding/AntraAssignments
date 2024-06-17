@@ -1,0 +1,38 @@
+<div>
+    <label>Search:</label>
+    <input type="text" [(ngModel)]="keyword">
+</div>
+
+<button (click)="getAllProducts()">Click here to get all products</button>
+<table>
+    <ng-container *ngIf="products.length > 0; else noProduct">
+        <th>TD</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Date</th>
+        <th>Quantity</th>
+
+        <tr *ngFor="let product of products | myFirst: keyword" appMyFirst>
+            <td>{{ product.id }}</td>
+            <td>{{ product.title }}</td>
+            <td>{{ product.price | currency: 'USD' : 'code'}}</td>
+            <td>{{ product.date | date: 'short' }}</td>
+            <td [ngSwitch]="product.quantity">
+                <p *ngSwitchCase="10">Not Enough</p>
+                <p *ngSwitchCase="5">Not Enough</p>
+                <p *ngSwitchDefault>Enough</p>
+            </td>
+        </tr>
+    </ng-container>
+</table>
+
+<ng-template #noProduct>
+    <p>No data to display</p>
+</ng-template>
+
+<div [ngClass]="'red-class'">ngClass Usage</div>
+<div [ngStyle]="{'font-size': '36px', 'font-family': 'arial'}">ngStyle Usage</div>
+
+<p [ngStyle]="red ? { 'color': 'red'} : green ? {'color': 'green'} : {'color': 'yellow'}">Change Style</p>
+
+<p [ngClass]="red ? 'red-class' : 'green-class'">Change Class</p>

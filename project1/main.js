@@ -133,9 +133,6 @@ const Controller = ((view, model) => {
         });
     }
 
-
-
-
     const bootstrap = () => {
         selectCourse();
         confirmSelection();

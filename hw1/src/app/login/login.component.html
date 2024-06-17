@@ -1,0 +1,7 @@
+<!-- login.component.html -->
+<div>
+    <input [(ngModel)]="username" placeholder="Enter username">
+    <button (click)="onLogin()">Log In</button>
+    <a [routerLink]="['/register']" routerLinkActive="router-link-active"  (click)="onRegister()">Register Link</a>
+    <p *ngIf="errorMessage">{{ errorMessage }}</p>
+  </div>
